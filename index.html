@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Ми за здоровий спосіб життя</title>
+
+<!-- Ключові слова -->
+<meta name="keywords" content="Харчування, Спорт, Режим дня, здоровий спосіб життя">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #e8f5e9;
+}
+
+header {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav button {
+    background: #66bb6a;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav button:hover {
+    background: #1b5e20;
+    color: white;
+}
+
+section {
+    display: none;
+    padding: 20px;
+}
+
+section.active {
+    display: block;
+}
+
+img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+</style>
+
+<script>
+function showPage(page) {
+    let sections = document.querySelectorAll("section");
+    sections.forEach(s => s.classList.remove("active"));
+    document.getElementById(page).classList.add("active");
+}
+</script>
+
+</head>
+<body>
+
+<header>
+<h1>Ми за здоровий спосіб життя</h1>
+
+<!-- Зображення у верхньому колонтитулі -->
+<img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a" alt="Здоровий спосіб життя">
+
+<nav>
+<button onclick="showPage('home')">Головна</button>
+<button onclick="showPage('harchuvannia')">Харчування</button>
+<button onclick="showPage('sport')">Спорт</button>
+<button onclick="showPage('rezhym')">Режим дня</button>
+</nav>
+</header>
+
+<!-- Головна -->
+<section id="home" class="active">
+<h2>Здоровий спосіб життя</h2>
+<p>Здоровий спосіб життя включає правильне харчування, фізичну активність та дотримання режиму дня.</p>
+</section>
+
+<!-- Харчування -->
+<section id="harchuvannia">
+<h2>Харчування</h2>
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Харчування">
+
+<p>Правильне харчування забезпечує організм поживними речовинами, енергією та зміцнює імунітет.</p>
+
+<p>Джерело інформації:  
+<a href="https://moz.gov.ua" target="_blank">МОЗ України</a></p>
+</section>
+
+<!-- Спорт -->
+<section id="sport">
+<h2>Спорт</h2>
+<img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74" alt="Спорт">
+
+<p>Регулярні фізичні вправи покращують роботу серця, легенів і м’язів.</p>
+
+<p>Джерело інформації:  
+<a href="https://www.who.int" target="_blank">Всесвітня організація охорони здоров’я</a></p>
+</section>
+
+<!-- Режим дня -->
+<section id="rezhym">
+<h2>Режим дня</h2>
+<img src="https://images.unsplash.com/photo-1527430253228-e93688616381" alt="Режим дня">
+
+<p>Дотримання режиму дня допомагає організму відновлюватися, підвищує працездатність і концентрацію.</p>
+
+<p>Джерело інформації:  
+<a href="https://www.healthline.com" target="_blank">Healthline</a></p>
+</section>
+
+</body>
+</html>
